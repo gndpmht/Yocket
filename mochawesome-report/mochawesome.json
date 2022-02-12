@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-28T23:39:20.826Z",
+    "end": "2022-01-28T23:40:03.420Z",
+    "duration": 42594,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b7d37116-abf2-40e6-a235-8449092c842f",
+      "title": "",
+      "fullFile": "cypress/integration/Aviyl/All URL.js",
+      "file": "cypress/integration/Aviyl/All URL.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4734d2ee-df86-4cc4-b034-6fa46a208a68",
+          "title": "Loading of the webpage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Loads the Webpage",
+              "fullTitle": "Loading of the webpage Loads the Webpage",
+              "timedOut": null,
+              "duration": 4363,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://uitestingplayground.com/home');",
+              "err": {},
+              "uuid": "233938db-7617-4b8f-ab52-be5ece2ca036",
+              "parentUUID": "4734d2ee-df86-4cc4-b034-6fa46a208a68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifies the hyperlinks are broken or not",
+              "fullTitle": "Loading of the webpage Verifies the hyperlinks are broken or not",
+              "timedOut": null,
+              "duration": 14678,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a:not([href*='mailto:]']\").each($el => {\n  cy.request({\n    url: $el.attr('href'),\n    failOnStatusCode: true\n  }).then(response => {\n    expect(response.status).to.eq(200);\n  });\n});",
+              "err": {},
+              "uuid": "04ae88f3-00fb-47e7-b911-f129b7b509a9",
+              "parentUUID": "4734d2ee-df86-4cc4-b034-6fa46a208a68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifies the hyperlinks are broken or not on Resources page ",
+              "fullTitle": "Loading of the webpage Verifies the hyperlinks are broken or not on Resources page ",
+              "timedOut": null,
+              "duration": 17846,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[href*='resources']\").click();\ncy.get(\"a:not([href*='mailto:]']\").each($el => {\n  cy.request({\n    url: $el.attr('href'),\n    failOnStatusCode: true\n  }).then(response => {\n    expect(response.status).to.eq(200);\n  });\n});",
+              "err": {},
+              "uuid": "ac4005c4-f278-42da-ac55-5345c5a02f66",
+              "parentUUID": "4734d2ee-df86-4cc4-b034-6fa46a208a68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Loads the Webpage",
+              "fullTitle": "Loading of the webpage Loads the Webpage",
+              "timedOut": null,
+              "duration": 2594,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\Aviyl\\\\All URL.js\\\\Loading of the webpage -- Loads the Webpage (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.visit('http://uitestingplayground.com/home453');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://uitestingplayground.com/home453\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://uitestingplayground.com/home453\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at http://uitestingplayground.com/__cypress/runner/cypress_runner.js:159034:84\n    at visitFailedByErr (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:158403:12)\n    at http://uitestingplayground.com/__cypress/runner/cypress_runner.js:159014:13\n    at tryCatcher (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://uitestingplayground.com/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://uitestingplayground.com/__cypress/tests?p=cypress\\integration\\Aviyl\\All%2520URL.js:125:8)",
+                "diff": null
+              },
+              "uuid": "6059d379-1952-437d-bfc5-0100469431ec",
+              "parentUUID": "4734d2ee-df86-4cc4-b034-6fa46a208a68",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "233938db-7617-4b8f-ab52-be5ece2ca036",
+            "04ae88f3-00fb-47e7-b911-f129b7b509a9",
+            "ac4005c4-f278-42da-ac55-5345c5a02f66"
+          ],
+          "failures": [
+            "6059d379-1952-437d-bfc5-0100469431ec"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39481,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

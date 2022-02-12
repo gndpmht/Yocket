@@ -1,0 +1,193 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-01-28T23:40:23.508Z",
+    "end": "2022-01-28T23:40:49.701Z",
+    "duration": 26193,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2bec9ca4-5667-4e31-998a-39db45ba1a41",
+      "title": "",
+      "fullFile": "cypress/integration/Aviyl/meta tag.js",
+      "file": "cypress/integration/Aviyl/meta tag.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "53abac4c-e11e-4770-a848-1c819c33eaae",
+          "title": "The Document Metadata",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "looks inside <title> tag",
+              "fullTitle": "The Document Metadata looks inside <title> tag",
+              "timedOut": null,
+              "duration": 1951,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('head title').should('contain', 'UI Test Automation Playground');",
+              "err": {},
+              "uuid": "5d4b5164-c32b-4ed1-b258-f49438b12cd6",
+              "parentUUID": "53abac4c-e11e-4770-a848-1c819c33eaae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "looks inside <meta> tag for description",
+              "fullTitle": "The Document Metadata looks inside <meta> tag for description",
+              "timedOut": null,
+              "duration": 4994,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\Aviyl\\\\meta tag.js\\\\The Document Metadata -- looks inside meta tag for description (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get('head meta[name=\"description\"]').should('have.attr', 'content');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `head meta[name=\"description\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `head meta[name=\"description\"]`, but never found it.\n    at Context.eval (http://uitestingplayground.com/__cypress/tests?p=cypress\\integration\\Aviyl\\meta%2520tag.js:108:45)",
+                "diff": null
+              },
+              "uuid": "04e86fcc-3473-46a6-b237-852fd83363e0",
+              "parentUUID": "53abac4c-e11e-4770-a848-1c819c33eaae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "looks inside <meta> tag for viewport",
+              "fullTitle": "The Document Metadata looks inside <meta> tag for viewport",
+              "timedOut": null,
+              "duration": 6454,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('head meta[name=\"viewport\"]').should('have.attr', 'content', 'width=device-width, initial-scale=1, shrink-to-fit=no');",
+              "err": {},
+              "uuid": "f9986738-0b95-4536-9c39-d5ccd2d64271",
+              "parentUUID": "53abac4c-e11e-4770-a848-1c819c33eaae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "looks inside <meta> tag for robots tag",
+              "fullTitle": "The Document Metadata looks inside <meta> tag for robots tag",
+              "timedOut": null,
+              "duration": 5591,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\Aviyl\\\\meta tag.js\\\\The Document Metadata -- looks inside meta tag for robots tag (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get('head meta[name=\"robots\"]').should('have.attr', 'content');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `head meta[name=\"robots\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `head meta[name=\"robots\"]`, but never found it.\n    at Context.eval (http://uitestingplayground.com/__cypress/tests?p=cypress\\integration\\Aviyl\\meta%2520tag.js:114:40)",
+                "diff": null
+              },
+              "uuid": "e6ef3541-1092-4637-848c-1dec4a6e960c",
+              "parentUUID": "53abac4c-e11e-4770-a848-1c819c33eaae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "looks inside <meta> tag for google tag",
+              "fullTitle": "The Document Metadata looks inside <meta> tag for google tag",
+              "timedOut": null,
+              "duration": 5082,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\Aviyl\\\\meta tag.js\\\\The Document Metadata -- looks inside meta tag for google tag (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get('head meta[name=\"google\"]').should('have.attr', 'content');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `head meta[name=\"google\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `head meta[name=\"google\"]`, but never found it.\n    at Context.eval (http://uitestingplayground.com/__cypress/tests?p=cypress\\integration\\Aviyl\\meta%2520tag.js:117:40)",
+                "diff": null
+              },
+              "uuid": "4a65baa6-0dbf-4cfa-910f-836beba9b127",
+              "parentUUID": "53abac4c-e11e-4770-a848-1c819c33eaae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5d4b5164-c32b-4ed1-b258-f49438b12cd6",
+            "f9986738-0b95-4536-9c39-d5ccd2d64271"
+          ],
+          "failures": [
+            "04e86fcc-3473-46a6-b237-852fd83363e0",
+            "e6ef3541-1092-4637-848c-1dec4a6e960c",
+            "4a65baa6-0dbf-4cfa-910f-836beba9b127"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24072,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
